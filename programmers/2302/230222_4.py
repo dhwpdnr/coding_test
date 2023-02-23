@@ -7,7 +7,7 @@ def solution(arr1, arr2):
         answer.append(sum_list)
     return answer
 
-    # 프로그래머스 연습문제 행렬의 덧
+    # 프로그래머스 연습문제 행렬의 덧셈
 
 
 def solution(arr1, arr2):
