@@ -1,0 +1,12 @@
+n = input()
+sum = 0
+if '0' not in n:
+    print(-1)
+else:
+    n = sorted(n, reverse=True)
+    for i in n:
+        sum += int(i)
+    if sum % 3 != 0:  # 3의 배수 체크
+        print(-1)
+    else:
+        print(''.join(n))
