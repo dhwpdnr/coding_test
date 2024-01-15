@@ -12,6 +12,11 @@ def solution(arr1, arr2):
     return answer
 
 
+# zip, sum, 리스트 컴프리핸션 사용 풀이
+def productMatrix(A, B):
+    return [[sum(a * b for a, b in zip(A_row, B_col)) for B_col in zip(*B)] for A_row in A]
+
+
 q = solution([[1, 4], [3, 2], [4, 1]], [[3, 3], [3, 3]])
 assert q == [[15, 15], [15, 15], [15, 15]]
 print(q)
