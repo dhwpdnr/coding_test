@@ -1,19 +1,27 @@
-def is_prime(n):
-    if n == 1:
+import math
+
+
+def d(N):
+    if N == 1:
         return False
-    for j in range(2, int(n ** 0.5) + 1):
-        if n % j == 0:
+    for i in range(2, int(math.sqrt(N)) + 1):
+        if N % i == 0:
             return False
     return True
 
 
-for _ in range(int(input())):
+N = int(input())
+
+for _ in range(N):
     num = int(input())
 
-    a, b = num // 2, num // 2
-    while a > 0:
-        if is_prime(a) and is_prime(b):
-            print(a, b)
+    A = num // 2
+    B = num // 2
+
+    for _ in range(num // 2):
+        if d(A) and d(B):
+            print(A, B)
+            break
         else:
-            a -= 1
-            b += 1
+            A -= 1
+            B += 1
